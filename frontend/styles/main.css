@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.nav-bar {
+  display: flex;
+}
 .logo > a {
   text-decoration: none;
   font-family: "Oswald", sans-serif;
@@ -11,4 +13,5 @@
   font-style: italic;
   font-weight: 900;
   font-size: xx-large;
+  color: black;
 }
