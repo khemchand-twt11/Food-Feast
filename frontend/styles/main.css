@@ -58,12 +58,22 @@
   font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
+.login a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: gray;
+}
 .signup {
   border: none;
   background-color: white;
   margin-right: 20px;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
+}
+.signup a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: gray;
 }
 .nav-list li:nth-child(3) button i {
   padding-right: 6px;
@@ -456,6 +466,21 @@
 
 /* CAROUSEL */
 
+/* MENU CARDS */
+.menu-carousel {
+  background: linear-gradient(to bottom, #2c2c2c, #000000);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.menu-card {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+a[href="../frontend/menu.html"] {
+  text-decoration: none;
+}
+/* MENU CARDS */
 /* MID */
 .mid {
   position: relative;

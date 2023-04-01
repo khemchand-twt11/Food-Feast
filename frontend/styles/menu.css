@@ -1,0 +1,39 @@
+#menu-items {
+  /* width: 80%; */
+  margin: auto;
+  /* background-color: black; */
+}
+#menu-items > div {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+.menu-title {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  width: 70%;
+  text-align: left;
+}
+
+.menu-desc {
+  text-align: left;
+  color: black;
+  font-size: 16px;
+}
+.menu-desc + div > p {
+  color: black;
+  font-weight: 700;
+}
+.menu-desc + div > button {
+  border: 2px solid black;
+  background-color: black;
+}
+.menu-desc + div > button:hover {
+  background-color: gray;
+  border: 2px solid gray;
+}
+.menu-desc + div > button:visited {
+  background-color: gray;
+}
