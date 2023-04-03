@@ -22,6 +22,10 @@ Food Feast is a comprehensive website dedicated to all things food, from recipes
 
 - [LIVE DEMO](https://incredible-gumdrop-9e9c46.netlify.app)
 
+## Screenshots of the website
+
+### HOME PAGE
+![Alt text](https://res.cloudinary.com/dmskljxga/image/upload/v1680506749/home_page_p4j8xk.png)
 ## Installing and Running
 
 <!-- <hr> -->
