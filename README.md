@@ -1,4 +1,4 @@
-![nord.png](/images/Clothie's.png)
+![nord.png]([/images/Clothie's.png](https://res.cloudinary.com/dmskljxga/image/upload/v1680505229/logo_ykjng3.png))
 
 clothie's is a baby clothing website where you can buy different variety of products
 
