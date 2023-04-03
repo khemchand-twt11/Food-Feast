@@ -20,7 +20,7 @@ Food Feast is a comprehensive website dedicated to all things food, from recipes
 - mongoose
 - mongodb
 
-- [LIVE DEMO]([https://nordstrom-cloned.herokuapp.com/](https://genuine-gaufre-964df3.netlify.app/)
+- [LIVE DEMO](https://incredible-gumdrop-9e9c46.netlify.app)
 
 ## Installing and Running
 
