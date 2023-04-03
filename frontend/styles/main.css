@@ -717,3 +717,8 @@ a[href="../frontend/menu.html"] {
 /* Styles for standard tablets and smaller laptops  */
 @media (min-width: 992px) and (max-width: 1199px) {
 }
+
+.swal2-popup {
+  width: 400px !important;
+  height: auto !important;
+}

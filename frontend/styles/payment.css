@@ -1,0 +1,73 @@
+.main-payment-div {
+  background-color: black;
+  padding-top: 40px;
+}
+.main-payment-div > div {
+  padding-top: 40px;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 100px;
+}
+.container {
+  height: 100vh;
+  width: 80%;
+}
+
+.card {
+  border: none;
+
+  height: 70vh;
+}
+
+.form-control {
+  border-bottom: 2px solid #eee !important;
+  border: none;
+  font-weight: 600;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #8bbafe;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 0px;
+  border-bottom: 2px solid blue !important;
+}
+
+.inputbox {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.inputbox span {
+  position: absolute;
+  top: 7px;
+  left: 11px;
+  transition: 0.5s;
+}
+
+.inputbox i {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  transition: 0.5s;
+  color: #3f51b5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputbox input:focus ~ span {
+  transform: translateX(-0px) translateY(-15px);
+  font-size: 12px;
+}
+
+.inputbox input:valid ~ span {
+  transform: translateX(-0px) translateY(-15px);
+  font-size: 12px;
+}
