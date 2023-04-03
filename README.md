@@ -1,6 +1,7 @@
-![nord.png]([/images/Clothie's.png](https://res.cloudinary.com/dmskljxga/image/upload/v1680505229/logo_ykjng3.png))
+![Nord Logo](https://res.cloudinary.com/dmskljxga/image/upload/v1680505229/logo_ykjng3.png)
 
-clothie's is a baby clothing website where you can buy different variety of products
+
+Food Feast is a comprehensive website dedicated to all things food, from recipes and cooking techniques to restaurant recommendations and food trends
 
 ---
 
