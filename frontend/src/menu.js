@@ -2,7 +2,7 @@
 const searchQuery = localStorage.getItem("searchQuery");
 const menuItem = localStorage.getItem("menu-item");
 const row = document.querySelector(".appendRow");
-
+const token = localStorage.getItem("token") || null;
 if (searchQuery) {
   window.addEventListener("load", async () => {
     try {
@@ -10,17 +10,30 @@ if (searchQuery) {
       console.log(`${baseUrl}menu/${searchQuery}`);
       let data = await res.json();
       console.log(data.data);
+      showData(data.data);
       localStorage.removeItem("searchQuery");
     } catch (error) {
       console.log(error);
     }
   });
-}
-
-if (menuItem) {
+} else if (menuItem) {
   window.addEventListener("load", async () => {
     try {
       let res = await fetch(`${baseUrl}menu/?item=${menuItem}`);
+
+      console.log(`${baseUrl}menu/${menuItem}`);
+      let data = await res.json();
+      console.log(data.data);
+      showData(data.data);
+      localStorage.removeItem("menu-item");
+    } catch (error) {
+      console.log(error);
+    }
+  });
+} else {
+  window.addEventListener("load", async () => {
+    try {
+      let res = await fetch(`${baseUrl}menu`);
       console.log(`${baseUrl}menu/${menuItem}`);
       let data = await res.json();
       console.log(data.data);
@@ -31,6 +44,7 @@ if (menuItem) {
     }
   });
 }
+
 function showData(data) {
   row.innerHTML = null;
   let newData = data
@@ -47,8 +61,9 @@ function showData(data) {
       )
     )
     .join("");
-  console.log(newData);
+
   row.innerHTML = newData;
+  cartFunctionalities();
 }
 
 function card(_id, img, title, description, label, cost, type, food_type) {
@@ -65,7 +80,7 @@ function card(_id, img, title, description, label, cost, type, food_type) {
       </p>
       <div class="d-flex justify-content-between align-items-center">
         <p class="card-price mb-0">₹ ${cost}/-</p>
-        <button type="button" class="btn btn-primary">
+        <button type="button" class="btn btn-primary cart-btn" data-id="${_id}">
           Add
         </button>
       </div>
@@ -73,24 +88,64 @@ function card(_id, img, title, description, label, cost, type, food_type) {
   </div>
 </div>`;
 }
-/*
- 
 
-        
-_id
-6425cd53684d690969534169
-img
-"https://d1rgpf387mknul.cloudfront.net/products/PLP/web/2x_web_20221128…"
-title
-"Veg Whopper"
-description
-"Our signature Whopper with 7 layers between the buns. Extra crunchy ve…"
-label
-"https://www.burgerking.in/static/media/veg.2d5a7ccc.svg"
-cost
-169
-type
-"whopper"
-food_type
-"veg"
- */
+const allItemsMenu = document.querySelectorAll(".menu__card");
+
+for (const item of allItemsMenu) {
+  item.addEventListener("click", async () => {
+    try {
+      let res = await fetch(`${baseUrl}menu/?item=${item.dataset.name}`);
+
+      console.log(`${baseUrl}menu/${menuItem}`);
+      let data = await res.json();
+      console.log(data.data);
+      showData(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  });
+}
+function cartFunctionalities() {
+  const allCartBtn = document.querySelectorAll(".cart-btn");
+  for (const btn of allCartBtn) {
+    btn.addEventListener("click", async () => {
+      const obj = {
+        menuId: btn.dataset.id,
+      };
+      try {
+        let res = await fetch(`${baseUrl}cart`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(obj),
+        })
+          .then((res) => res.json())
+          .then((data) => alert(data.msg));
+
+        console.log(`${baseUrl}menu/${menuItem}`);
+        let data = await res.json();
+        console.log(data.data);
+        showData(data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    });
+  }
+}
+
+/*
+
+Swal.fire({
+      title: "Done!",
+      text: "Product Added To Cart!",
+      icon: "success",
+      customClass: {
+        title: "my-title-class",
+        content: "my-content-class",
+        icon: "icon-success",
+        confirmButton: "my-confirm-button-class",
+      },
+    });
+*/

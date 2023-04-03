@@ -7,7 +7,7 @@
   width: 90%;
   margin: auto;
   padding-bottom: 200px;
-  padding-top: 200px;
+  padding-top: 150px;
 }
 .menu-title {
   color: black;
@@ -34,6 +34,11 @@
   background-color: gray;
   border: 2px solid gray;
 }
+
 .menu-desc + div > button:visited {
   background-color: gray;
+}
+
+.menu__card {
+  cursor: pointer;
 }
