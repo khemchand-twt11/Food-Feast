@@ -28,7 +28,7 @@ Food Feast is a comprehensive website dedicated to all things food, from recipes
 
 To run this application on your local system, execute the following commands on your terminal/command line:
 
-<code>git clone https://github.com/khemchand-twt11/hallowed-key-8078.git</code>
+<code>git clone https://github.com/khemchand-twt11/enormous-weight-975.git</code>
 
 ## Features
 
